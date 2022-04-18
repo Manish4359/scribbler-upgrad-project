@@ -4,7 +4,7 @@
 <head>
     <!-- TODO: Include Font Awesome file here -->
     <!-- TODO: Include Google Fonts file here -->
-    
+
     <link href="https://fonts.googleapis.com/css?family=Montez&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./css/index.css">
@@ -28,38 +28,53 @@
         <button class="create-post-btn">create post</button>
     </main>
 
-    <!--
-    <div class="mask">
+    <div class="modal signin-modal">
+        <div class="signin">
+            <div class="form-title">
+                <span>Get started</span>
+                <div class="close-btn"><i class="fa fa-times" aria-hidden="true"></i></div>
+            </div>
+            <form>
+                <label for="signin-username">Username</label>
+                <input id='signin-username' type="text" placeholder="username" required>
 
-        <div class="signup">
-            <label for="signup-name">Name</label>
-            <input id='signup-name' type="text" placeholder="name" required>
-            
-            <label for="signup-username">Username</label>
-            <input id='signup-username' type="text" placeholder="username" required>
-            
-            <label for="signup-pass">Password</label>
-            <input id='signup-pass' type="password" placeholder="password" required>
-            
-            <label for='signup-pass-confirm'>Confirm Passord</label>
-            <input id='signup-pass-confirm' type="password" placeholder="confirm password" required>
-            
-            <button>signup</button>
+
+                <label for="signin-pass">Password</label>
+                <input id='signin-pass' type="password" placeholder="password" required>
+                <button class="btn form-submit">signup</button>
+            </form>
+            <span>Not a member ?<button class="signup-link">signup</button></span>
+
         </div>
     </div>
-    <div class="signup">
-       
-        <label for="signin-username">Username</label>
-        <input id='signin-username' type="text" placeholder="username" required>
 
+    <div class="modal signup-modal">
 
-        <label for="signin-pass">Password</label>
-        <input id='signin-pass' type="password" placeholder="password" required>
-        <button>signup</button>
-        <span>Not a member signup</span>
-    </div> 
+        <div class="signup">
+            <div class="form-title">
+                <span>Get started</span>
+                <div class="close-btn"><i class="fa fa-times" aria-hidden="true"></i></div>
+            </div>
+            <form>
+                <label for="signup-name">Name</label>
+                <input id='signup-name' type="text" placeholder="name" required>
 
-    -->
+                <label for="signup-username">Username</label>
+                <input id='signup-username' type="text" placeholder="username" required>
+
+                <label for="signup-pass">Password</label>
+                <input id='signup-pass' type="password" placeholder="password" required>
+
+                <label for='signup-pass-confirm'>Confirm Passord</label>
+                <input id='signup-pass-confirm' type="password" placeholder="confirm password" required>
+
+                <button class="btn form-submit">signup</button>
+            </form>
+        </div>
+    </div>
+
+   
 </body>
 <script src="./index.js"></script>
+
 </html>
