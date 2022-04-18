@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    background: url('./../images/background.jpg')  no-repeat  center;
+    background-size: cover;
+}
+
+header{
+    padding: 15px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.heading{
+    display: flex;
+    flex-direction: column;
+}
+.heading-title{
+    font-family: 'Montez', cursive; 
+    color: blue;
+}
+
+main{
+    height: 80vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.btn{
+    color: white;
+    background: blue;
+    border: none;
+    padding: 5px;
+    margin: 5px;
+}
+
+
+.signup{
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 20px;
+    position: absolute;
+    left:50%;
+    top:50%;
+    
+    transform: translate(-50%,-50%);
+    z-index: 5;
+   
+}
+
+.mask{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(50px);
+}
+label{
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+input{
+    margin-bottom: 10px;
+    border: none;
+    padding: 5px 0;
+}
+
+input:focus{
+    outline: none;
+    border: none;
+    background: #eee;
+}
+
+.title{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
