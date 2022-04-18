@@ -31,19 +31,19 @@
     <div class="modal signin-modal">
         <div class="signin">
             <div class="form-title">
-                <span>Get started</span>
+                <h2>Welcome Back!</h2>
                 <div class="close-btn"><i class="fa fa-times" aria-hidden="true"></i></div>
             </div>
             <form>
                 <label for="signin-username">Username</label>
-                <input id='signin-username' type="text" placeholder="username" required>
+                <input id='signin-username' type="text" placeholder="Enter your username" required>
 
 
                 <label for="signin-pass">Password</label>
-                <input id='signin-pass' type="password" placeholder="password" required>
+                <input id='signin-pass' type="password" placeholder="Enter your password" required>
                 <button class="btn form-submit">signup</button>
             </form>
-            <span>Not a member ?<button class="signup-link">signup</button></span>
+            <p>Not a member ?<button class="signup-link">signup</button></p>
 
         </div>
     </div>
@@ -52,27 +52,46 @@
 
         <div class="signup">
             <div class="form-title">
-                <span>Get started</span>
+                <h3>Get started</h3>
                 <div class="close-btn"><i class="fa fa-times" aria-hidden="true"></i></div>
             </div>
             <form>
                 <label for="signup-name">Name</label>
-                <input id='signup-name' type="text" placeholder="name" required>
+                <input id='signup-name' type="text" placeholder="Enter your name" required>
 
                 <label for="signup-username">Username</label>
-                <input id='signup-username' type="text" placeholder="username" required>
+                <input id='signup-username' type="text" placeholder="Enter your username" required>
 
                 <label for="signup-pass">Password</label>
-                <input id='signup-pass' type="password" placeholder="password" required>
+                <input id='signup-pass' type="password" placeholder="Enter your password" required>
 
-                <label for='signup-pass-confirm'>Confirm Passord</label>
-                <input id='signup-pass-confirm' type="password" placeholder="confirm password" required>
+                <label for='signup-pass-confirm'>Confirm Password</label>
+                <input id='signup-pass-confirm' type="password" placeholder="Re-enter your password" required>
 
                 <button class="btn form-submit">signup</button>
             </form>
         </div>
     </div>
 
+    <div class="modal create-post-modal">
+
+        <div class="create-post">
+            <div class="form-title">
+                <h3>Pen your post</h3>
+                <div class="close-btn"><i class="fa fa-times" aria-hidden="true"></i></div>
+            </div>
+            <form>
+                <label for="content-title">Title</label>
+                <input id="content-title" type="text" placeholder="Enter title of your post" required>
+                
+                <label for="content">Content</label>
+                <textarea id='content'placeholder="Enter your username"></textarea>
+                
+                <button class="btn form-submit">create</button>
+            </form>
+            <!---->
+        </div>
+    </div>
    
 </body>
 <script src="./index.js"></script>

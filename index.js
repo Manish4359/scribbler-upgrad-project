@@ -14,13 +14,31 @@ signUpBtn.addEventListener('click',()=>{
     
 })
 
-closeBtn.forEach((btn)=>btn.addEventListener('click',()=>{
+closeBtn.forEach((btn)=>btn.addEventListener('click',(e)=>{
+
+    console.log(e.target.closest('.modal'))
+    const modalType=e.target.closest('.modal');
+
+    if(modalType.classList.contains('create-post-modal')){
+        modalType.style.display="none";
+    }
+    if(modalType.classList.contains('signin-modal')){
+        modalType.style.display="none";
+    }
+    if(modalType.classList.contains('signup-modal')){
+        modalType.style.display="none";
+    }
+    
+
+    /*
     document.querySelector('.signin-modal').style.display="none";
     document.querySelector('.signup-modal').style.display="none";
-
+*/
 }))
 
 document.querySelector('.signup-link').addEventListener('click',()=>{
     document.querySelector('.signin-modal').style.display="none";
     document.querySelector('.signup-modal').style.display="block";
 })
+
+//document.querySelector('.create-post-modal').style.display='block';
