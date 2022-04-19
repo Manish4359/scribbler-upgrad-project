@@ -1,0 +1,143 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+
+header{
+    padding: 15px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.heading{
+    display: flex;
+    flex-direction: column;
+}
+.heading-title{
+    font-family: 'Montez', cursive; 
+    color: blue;
+}
+
+.signup{
+    width: 300px;
+    background-color: white;
+    padding: 20px;
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    z-index: 5;
+}
+.signin{
+
+    width: 300px;
+    background-color: white;
+    padding: 20px;
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    z-index: 5;
+
+}
+
+.btn{
+    color: white;
+    background: blue;
+    border: none;
+    padding: 5px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+
+.modal{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    
+    background: rgba(150, 150, 150, 0.7);
+    
+    top: 0;
+    left: 0;
+    display: none;
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+
+form{
+    
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+}
+
+label{
+    margin-bottom: 5px;
+    padding: 5px 0;
+    font-weight: 500;
+}
+input{
+    margin-bottom: 10px;
+    border: none;
+    padding: 10px;
+    background: #eee;
+    
+}
+
+input:focus{
+    outline: none;
+    border: none;
+}
+.form-submit{
+    padding: 10px 0;
+    margin: 5px 0;
+    background: rgb(0, 202, 40) ;
+   
+    font-weight: 600;
+}
+
+
+
+.form-title{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom:10px ;
+    border-bottom: 1px solid #ccc;
+}
+
+.close-btn{
+    height:15px;
+    width:15px;
+    padding: 3px;
+    border-radius: 50%;
+    transform: scale(1);
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.close-btn > i{
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+}
+.close-btn:hover{
+    transform: scale(1.15);
+    color: white;
+    background: red;
+}
+
+.signup-link{
+    text-decoration: none;
+    background: none;
+    border: none;
+    color: blue;
+    font-weight: 700;
+    margin-left: 5px;
+    cursor: pointer;
+}

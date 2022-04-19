@@ -1,0 +1,119 @@
+const signInBtn = document.querySelector('.sign-in-btn');
+const signUpBtn = document.querySelector('.sign-up-btn');
+
+const closeBtn = document.querySelectorAll('.close-btn');
+
+
+
+const headerMarkup = `<header>
+<div class="heading">
+    <h1 class="heading-title">ScriBBler</h1>
+    <span class="subheading">Explore, Imagine,Create</span>
+</div>
+<div class="sign-in-sign-up">
+    <button class="btn sign-up-btn">Sign Up</button>
+    <button class="btn sign-in-btn">Sign In</button>
+
+</div>
+</header>`;
+
+const signinMarkup = `<div class="modal signin-modal">
+<div class="signin">
+    <div class="form-title">
+        <h2>Welcome Back!</h2>
+        <div class="close-btn"><i class="fa fa-times" aria-hidden="true"></i></div>
+    </div>
+    <form>
+        <label for="signin-username">Username</label>
+        <input id='signin-username' type="text" placeholder="Enter your username" required>
+
+
+        <label for="signin-pass">Password</label>
+        <input id='signin-pass' type="password" placeholder="Enter your password" required>
+        <button class="btn form-submit">signup</button>
+    </form>
+    <p>Not a member ?<button class="signup-link">signup</button></p>
+
+</div>
+</div>`;
+
+
+const signupMarkup = `<div class="modal signup-modal">
+
+<div class="signup">
+    <div class="form-title">
+        <h3>Get started</h3>
+        <div class="close-btn"><i class="fa fa-times" aria-hidden="true"></i></div>
+    </div>
+    <form>
+        <label for="signup-name">Name</label>
+        <input id='signup-name' type="text" placeholder="Enter your name" required>
+
+        <label for="signup-username">Username</label>
+        <input id='signup-username' type="text" placeholder="Enter your username" required>
+
+        <label for="signup-pass">Password</label>
+        <input id='signup-pass' type="password" placeholder="Enter your password" required>
+
+        <label for='signup-pass-confirm'>Confirm Password</label>
+        <input id='signup-pass-confirm' type="password" placeholder="Re-enter your password" required>
+
+        <button class="btn form-submit">signup</button>
+    </form>
+</div>
+</div>`;
+
+
+document.body.insertAdjacentHTML('afterBegin', headerMarkup)
+document.body.innerHTML += signinMarkup;
+document.body.innerHTML += signupMarkup
+
+
+document.querySelector('.sign-in-btn').addEventListener('click', (e) => {
+
+    document.querySelector('.signin-modal').style.display = "block";
+
+})
+
+document.querySelector('.sign-up-btn').addEventListener('click', () => {
+    document.querySelector('.signup-modal').style.display = "block";
+
+})
+
+
+
+
+document.querySelectorAll('.close-btn').forEach((btn) => btn.addEventListener('click', (e) => {
+
+    console.log(e.target.closest('.modal'))
+    const modalType = e.target.closest('.modal');
+
+    if (modalType.classList.contains('create-post-modal')) {
+        modalType.style.display = "none";
+    }
+    if (modalType.classList.contains('signin-modal')) {
+        modalType.style.display = "none";
+    }
+    if (modalType.classList.contains('signup-modal')) {
+        modalType.style.display = "none";
+    }
+
+
+    /*
+    document.querySelector('.signin-modal').style.display="none";
+    document.querySelector('.signup-modal').style.display="none";
+*/
+}))
+
+
+
+document.querySelector('.signup-link')?.addEventListener('click', () => {
+    document.querySelector('.signin-modal').style.display = "none";
+    document.querySelector('.signup-modal').style.display = "block";
+})
+
+
+
+
+/*-------------------postlist.js-------------------*/
+
