@@ -1,4 +1,6 @@
-const postDelete=document.querySelectorAll('.post-delete');
+
+
+const postDelete=document.querySelectorAll('.post-delete-icon');
 
 postDelete.forEach((post)=>{
 

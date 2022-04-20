@@ -3,7 +3,7 @@ const signUpBtn = document.querySelector('.sign-up-btn');
 
 const closeBtn = document.querySelectorAll('.close-btn');
 
-
+let posts=[];
 
 const headerMarkup = `<header>
 <div class="heading">

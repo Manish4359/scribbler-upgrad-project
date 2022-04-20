@@ -47,7 +47,9 @@
     color: rgb(141, 141, 141);
 }
 
-
+.post-delete-icon{
+    cursor: pointer;
+}
 .post-description{
     margin: 10px;
 }
@@ -56,6 +58,7 @@
     position: absolute;
     bottom: 5px;
     right: 20px;
+    cursor: pointer;
 }
 
 .delete-post{
