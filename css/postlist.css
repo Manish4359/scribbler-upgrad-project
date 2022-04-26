@@ -30,9 +30,10 @@
 }
 
 .post-author{
+    width:40%;
     padding: 10px;
     background: white;
-    display: grid;
+    display: flex;
     place-items: center;
     font-weight: 600;
     text-transform: capitalize;

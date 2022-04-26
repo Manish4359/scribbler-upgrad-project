@@ -1,27 +1,31 @@
+const postsContainer = document.querySelector('.posts-container');
 
+renderPosts();
 
-const postDelete=document.querySelectorAll('.post-delete-icon');
+postsContainer.innerHTML = postLists;
 
-postDelete.forEach((post)=>{
+const postDelete = document.querySelectorAll('.post-delete-icon');
 
-    post.addEventListener('click',(e)=>{
+postDelete.forEach((post) => {
 
-       const deleteModal=document.querySelector('.delete-modal');
-       deleteModal.style.display='block';
+    post.addEventListener('click', (e) => {
 
-        document.querySelector('.option-yes').onclick=(e)=>{
+        const deleteModal = document.querySelector('.delete-modal');
+        deleteModal.style.display = 'block';
+
+        document.querySelector('.option-yes').onclick = (e) => {
             console.log(e);
-            deleteModal.style.display='';
+            deleteModal.style.display = '';
             post.closest('.post').remove();
 
         }
 
-        document.querySelector('.option-no').onclick=(e)=>{
+        document.querySelector('.option-no').onclick = (e) => {
             console.log(e);
-            deleteModal.style.display='';
+            deleteModal.style.display = '';
 
         }
-       
+
     })
 })
 

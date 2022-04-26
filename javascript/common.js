@@ -3,7 +3,71 @@ const signUpBtn = document.querySelector('.sign-up-btn');
 
 const closeBtn = document.querySelectorAll('.close-btn');
 
-let posts=[];
+
+//A function used to render the following markup in the postlist.html
+
+const postMarkup =({author,title,description},index)=> `
+        <div class="post post-${index}">
+            <div class="post-author">
+                <p>${author}</p>
+
+            </div>
+
+            <div class="post-content">
+                <div class="post-title">
+                    <p>${title}</p>
+                    <span class="post-delete-icon">
+
+                        <i class="fa fa-trash-o" aria-hidden="true"></i>
+                    </span>
+                </div>
+                <p class="post-description">${description}</p>
+                <a href="./post.html" class="ellipsis">
+
+                    <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+
+`
+
+//this array stores all the posts
+let posts = [
+    {
+        author: 'Srishti Gupta',
+        title: '‘let’ me be a ‘const’(ant), not a ‘var’(iable)!',
+        description: 'Since JavaScript does not have any type-checking, either of these keywords can be used to declare a variable of any type (datatype) in JavaScript. Though all the three keywords are used for the same purpose, they are different.'
+    },
+    {
+        author: 'Colby Fayock',
+        title: 'What is linting and how can it save you time?',
+        description: 'One of the biggest challenges in software development is time. It’s something we can’t easily get more of, but linting can help us make the most out of the time we have.'
+    },
+    {
+        author: 'Yazeed Bzadough',
+        title: 'How to Get More Views on Your Tech Blog',
+        description: "If you're a developer with a Twitter account, you've already seen everyone and their cat start a blog, YouTube channel, or Patreon. We all want to become stars, or at the very least, a recognizable name in the industry."
+    },
+    {
+        author: 'Cedd Burge',
+        title: 'How to write easily describable code',
+        description: 'Since JavaScript does not have any type-checking, either of these keywords can be used to declare a variable of any type (datatype) in JavaScript. Though all the three keywords are used for the same purpose, they are different.'
+    },
+
+];
+
+
+
+let postLists;
+
+function renderPosts(){
+
+    postLists=posts.map((post,index)=>postMarkup(post,index)).join(' ');
+}
+
+
+
+//this is the header code  
 
 const headerMarkup = `<header>
 <div class="heading">
@@ -16,6 +80,8 @@ const headerMarkup = `<header>
 
 </div>
 </header>`;
+
+//Sign in markup
 
 const signinMarkup = `<div class="modal signin-modal">
 <div class="signin">
@@ -99,10 +165,7 @@ document.querySelectorAll('.close-btn').forEach((btn) => btn.addEventListener('c
     }
 
 
-    /*
-    document.querySelector('.signin-modal').style.display="none";
-    document.querySelector('.signup-modal').style.display="none";
-*/
+   
 }))
 
 
@@ -111,9 +174,4 @@ document.querySelector('.signup-link')?.addEventListener('click', () => {
     document.querySelector('.signin-modal').style.display = "none";
     document.querySelector('.signup-modal').style.display = "block";
 })
-
-
-
-
-/*-------------------postlist.js-------------------*/
 
